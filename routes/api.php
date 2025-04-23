@@ -48,3 +48,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/roles', [RoleController::class, 'index']);
     Route::get('/users/{userId}/roles', [UserController::class, 'getRoles']);
 });
+
+Route::get('/dashboard', function () {
+    return response()->json([
+        'message' => 'Welcome to the API',
+    ]);
+});
